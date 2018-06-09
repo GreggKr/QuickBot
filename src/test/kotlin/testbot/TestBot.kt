@@ -6,7 +6,7 @@ import net.dv8tion.jda.core.JDABuilder
 class TestBot {
     fun start() {
         JDABuilder(AccountType.BOT)
-                .setToken("NDM1MDgyNDgzMjQ4MTM2MTky.DfxmQg.nUE0Y9cS0W5dbYZO0vMNQ8kqqTM")
+                .setToken("NDM1MDgyNDgzMjQ4MTM2MTky.DfxmQg.nUE0Y9cS0W5dbYZO0vMNQ8kqqTM") // invalidated btw
                 .addEventListener(TestListener())
                 .buildBlocking()
     }

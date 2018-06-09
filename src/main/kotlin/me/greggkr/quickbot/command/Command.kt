@@ -18,9 +18,9 @@ interface Command {
         return javaClass.getAnnotation(RequiredPermissions::class.java)
     }
 
-    fun getRequiredRoles(): RequiredRoles? {
-        return javaClass.getAnnotation(RequiredRoles::class.java)
-    }
+//    fun getRequiredRoles(): RequiredRoles? {
+//        return javaClass.getAnnotation(RequiredRoles::class.java)
+//    }
 
     fun hasSubCommands(): Boolean {
         return javaClass.getAnnotation(SubCommands::class.java) != null

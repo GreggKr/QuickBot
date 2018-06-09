@@ -32,23 +32,23 @@ object CommandUtil {
             }
         }
 
-        val roles = command.getRequiredRoles()
-
-        if (roles != null) {
-            if (roles.allRequired) {
-                val allowed = roles.roleIds
-                        .mapNotNull { message.guild.getRoleById(it) }
-                        .any { !member.roles.contains(it) }
-
-                if (!allowed) return Response.NO_PERMISSION
-            } else {
-                val allowed = roles.roleIds
-                        .mapNotNull { message.guild.getRoleById(it) }
-                        .any { member.roles.contains(it) }
-
-                if (!allowed) return Response.NO_PERMISSION
-            }
-        }
+//        val roles = command.getRequiredRoles()
+//
+//        if (roles != null) {
+//            if (roles.allRequired) {
+//                val allowed = roles.roleIds
+//                        .mapNotNull { message.guild.getRoleById(it) }
+//                        .any { !member.roles.contains(it) }
+//
+//                if (!allowed) return Response.NO_PERMISSION
+//            } else {
+//                val allowed = roles.roleIds
+//                        .mapNotNull { message.guild.getRoleById(it) }
+//                        .any { member.roles.contains(it) }
+//
+//                if (!allowed) return Response.NO_PERMISSION
+//            }
+//        }
 
         if (command.hasSubCommands() && a.size > 1) {
             command.getSubCommands()?.forEach {
