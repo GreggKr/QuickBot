@@ -52,7 +52,7 @@ object CommandUtil {
 
         if (command.hasSubCommands() && a.size > 1) {
             command.getSubCommands()?.forEach {
-                if (it.isTrigger(a[1])) {
+                if (it.isTrigger(a[0])) {
                     return CommandUtil.execute(it, message, a.toList().subList(1, a.size).toTypedArray(), true)
                 }
             }
